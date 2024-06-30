@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="539.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep12.jdbc.first_project.controller.MainViewController">
+   <children>
+      <Label layoutX="38.0" layoutY="30.0" text="JDBC First Project: Student Management">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <VBox layoutX="16.0" layoutY="78.0" prefHeight="126.0" prefWidth="566.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="146.0" text="Student ID:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtId" editable="false" prefHeight="24.0" prefWidth="440.0" text="GENERATED ID" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="149.0" text="Student Name:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtName" prefHeight="24.0" prefWidth="440.0" promptText="Eg: Kasun Sampath" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="154.0" text="Student Address:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAddress" prefHeight="24.0" prefWidth="443.0" promptText="Eg: No.500, Galle Road, Panadura" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="16.0" prefWidth="149.0" text="Student Contact:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtContact" prefHeight="24.0" prefWidth="439.0" promptText="Eg: 071-6950532" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnNewStudent" layoutX="452.0" layoutY="29.0" mnemonicParsing="false" onAction="#btnNewStudentOnAction" style="-fx-background-color: green;" text="+ NEW STUDENT" textFill="WHITE" />
+      <Button fx:id="btnSave" defaultButton="true" layoutX="162.0" layoutY="216.0" mnemonicParsing="false" onAction="#btnSaveOnAction" text="SAVE" />
+      <Button fx:id="btnDelete" layoutX="238.0" layoutY="216.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="DELETE" />
+      <TableView fx:id="tblStudent" layoutX="14.0" layoutY="262.0" onKeyPressed="#tblStudentOnKeyPressed" onKeyReleased="#tblStudentOnKeyReleased" prefHeight="265.0" prefWidth="575.0">
+        <columns>
+          <TableColumn prefWidth="90.0" text="ID" />
+          <TableColumn prefWidth="199.0" text="NAME" />
+            <TableColumn prefWidth="157.0" text="ADDRESS" />
+            <TableColumn prefWidth="128.0" text="CONTACT" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
